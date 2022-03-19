@@ -4,7 +4,6 @@ describe('buscar fotos e dados', () => {
         cy.request({
             method: 'GET',
             url: Cypress.env('urlGET')
-            //url: 'https://apialurapic.herokuapp.com/flavio/photos'
         }).then((resp) => {
             expect(resp.status).to.be.equal(200)
             expect(resp.body).is.not.empty
@@ -17,7 +16,6 @@ describe('buscar fotos e dados', () => {
         cy.request({
             method: 'POST',
             url: Cypress.env('urlPOST'),
-            //url: 'https://apialurapic.herokuapp.com/user/login',
             body: Cypress.env()
         }).then((resp) => {
             expect(resp.status).to.be.equal(200)
